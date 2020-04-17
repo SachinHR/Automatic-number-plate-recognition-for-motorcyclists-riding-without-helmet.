@@ -23,7 +23,7 @@ while 1:
         cv2.putText(img,'Motor_Cyclist_Without_Helmet',(x-w,y-h), font, 0.5, (11,255,255), 2, cv2.LINE_AA)
 ```
 
-![Image](https://i.imgur.com/b8jBq8j.png) 
+![Image](https://github.com/SachinHR/Automatic-number-plate-recognition-for-motorcyclists-riding-without-helmet./blob/master/Image/Motor_Cycle.png) 
 
 * Recognising Number Plate and saved on a Folder
 ```
@@ -38,7 +38,7 @@ while 1:
             grey_image = cv2.imread(number_plate,cv2.IMREAD.GREYSCALE)
             cv2.imwrite("C:\Home\ML_Project\Number_Plates_detected",grey_image) 
 ```
-![image](https://i.imgur.com/d8VGGM3.jpg)
+![image](https://github.com/SachinHR/Automatic-number-plate-recognition-for-motorcyclists-riding-without-helmet./blob/master/Image/Number_plate.jpg)
 
 * Image showing
 ```
@@ -67,7 +67,7 @@ cv2.destroyAllWindows()
 ## Installation Options:
 
 ### Installing on Mac or Linux
-First, make sure you have machine installed Python 3.3+
+First, make sure you have installed Python 3.3+ on your machine.
 * [Install Python](https://realpython.com/installing-python/)
 * Install OpenCV package on terminal
 
