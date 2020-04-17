@@ -38,8 +38,8 @@ while 1:
             grey_image = cv2.imread(number_plate,cv2.IMREAD.GREYSCALE)
             cv2.imwrite("C:\Home\ML_Project\Number_Plates_detected",grey_image) 
 ```
-
 ![image](https://i.imgur.com/d8VGGM3.jpg)
+
 * Image showing
 ```
     cv2.imshow('img',img)   
@@ -47,11 +47,13 @@ while 1:
     if k == 27:                 
         break
 ```
+
 * Destroy all windows
 ```
 cap.release()
 cv2.destroyAllWindows()   
 ```
+
 ## Table of Contents
 * [Description](#Description)
 * [Installation](#Installation)
