@@ -24,7 +24,7 @@ Real-time Number plate recognition for motorcyclists riding without helmet proje
 ## Installation Options:
 
 ### Installing on Mac or Linux
-First, make sure you have machine installed Python 3.3+
+First, make sure you have installed Python 3.3+ on your machine.
 * [Install Python](https://realpython.com/installing-python/)
 * Install OpenCV package on terminal
 
