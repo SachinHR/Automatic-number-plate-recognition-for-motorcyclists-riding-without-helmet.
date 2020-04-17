@@ -4,9 +4,54 @@
 Real-time Number plate recognition for motorcyclists riding without helmet project with OpenCV and Python
 
 * Recognising Motor Cyclist Riding Without Helmet
+```
+import cv2
 
-![Image](https://i.imgur.com/ejfjegK.png)
+motor_cycle = cv2.CascadeClassifier('haarcascade_motorcyclist_without_helmet.xml')                     
+number_plate = cv2.CascadeClassifier('haarcascade_number_plate.xml')
 
+cap = cv2.VideoCapture(0)                                                     
+
+while 1: 
+    ret, img = cap.read()                                               
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)  
+    motor_cycle = motor_cycle.detectMultiScale(gray, 1.3, 5)                                           
+
+    for (x,y,w,h) in motor_cycle:
+        cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)         
+        font = cv2.FONT_HERSHEY_SIMPLEX
+        cv2.putText(img,'Motor_Cyclist_Without_Helmet',(x-w,y-h), font, 0.5, (11,255,255), 2, cv2.LINE_AA)
+```
+
+![Image](https://i.imgur.com/b8jBq8j.png) 
+
+* Recognising Number Plate and saved on a Folder
+```
+        roi_blue = gray[y:y+h, x:x+w]
+        roi_color = img[y:y+h, x:x+w]
+        number_plate = number_plate.detectMultiScale(roi_blue) 
+        for (nx,ny,nw,nh) in number_plate:
+            number_plate = cv2.rectangle(roi_color,(nx,ny),(nx+nw,ny+nh),(0,255,0),2) 
+            font = cv2.FONT_HERSHEY_SIMPLEX
+            cv2.putText(img,'Number_Plate',(x-w,y-h), font, 0.5, (11,255,255), 2, cv2.LINE_AA) 
+
+            grey_image = cv2.imread(number_plate,cv2.IMREAD.GREYSCALE)
+            cv2.imwrite("C:\Home\ML_Project\Number_Plates_detected",grey_image) 
+```
+
+![image](https://i.imgur.com/d8VGGM3.jpg)
+* Image showing
+```
+    cv2.imshow('img',img)   
+    k = cv2.waitKey(30) & 0xff   
+    if k == 27:                 
+        break
+```
+* Destroy all windows
+```
+cap.release()
+cv2.destroyAllWindows()   
+```
 ## Table of Contents
 * [Description](#Description)
 * [Installation](#Installation)
@@ -31,5 +76,6 @@ First, make sure you have machine installed Python 3.3+
 
  sudo apt install python3-opencv
 ```
+
 
 
