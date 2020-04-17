@@ -5,7 +5,11 @@ Real-time Number plate recognition for motorcyclists riding without helmet proje
 
 * Recognising Motor Cyclist Riding Without Helmet
 
-![Image](https://i.imgur.com/ejfjegK.png)
+![Image](https://github.com/SachinHR/Automatic-number-plate-recognition-for-motorcyclists-riding-without-helmet./blob/master/Image/Motor_Cycle.png)
+
+* Recognising Number Plate
+
+![Image](https://github.com/SachinHR/Automatic-number-plate-recognition-for-motorcyclists-riding-without-helmet./blob/master/Image/Number_plate.jpg)
 
 ## Table of Contents
 * [Description](#Description)
