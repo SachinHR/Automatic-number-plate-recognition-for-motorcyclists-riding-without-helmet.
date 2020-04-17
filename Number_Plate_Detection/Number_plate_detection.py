@@ -15,9 +15,9 @@ while 1:
         font = cv2.FONT_HERSHEY_SIMPLEX
         cv2.putText(img,'Motor_Cyclist_Without_Helmet',(x-w,y-h), font, 0.5, (11,255,255), 2, cv2.LINE_AA)  # Put text on MotorCycle Rectangle 
 
-        roi_red = gray[y:y+h, x:x+w]
+        roi_blue = gray[y:y+h, x:x+w]
         roi_color = img[y:y+h, x:x+w]
-        number_plate = number_plate.detectMultiScale(roi_red)                                               # Detecting MotorCycle Number Plates
+        number_plate = number_plate.detectMultiScale(roi_blue)                                              # Detecting MotorCycle Number Plates
         for (nx,ny,nw,nh) in number_plate:
             number_plate = cv2.rectangle(roi_color,(nx,ny),(nx+nw,ny+nh),(0,255,0),2)                       # Marking out a rectangle on number plates
             font = cv2.FONT_HERSHEY_SIMPLEX
